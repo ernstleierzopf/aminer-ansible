@@ -115,7 +115,7 @@
     src: "/usr/local/bin/aminerwrapper.sh"
     dest: "/usr/bin/aminer-persistence"
     state: "link"
- 
+
 - name: Set aminer permissions
   file:
     path: "/usr/lib/logdata-anomaly-miner/aminer.py"
@@ -325,6 +325,13 @@
 - name: Install bcrypt
   pip:
     name: bcrypt==3.2.2 # to work with passlib version 1.7.4
+    virtualenv: /usr/lib/logdata-anomaly-miner/.venv
+    state: latest
+  when: aminerrest_repopath != False
+
+- name: Install jsonschema
+  pip:
+    name: jsonschema
     virtualenv: /usr/lib/logdata-anomaly-miner/.venv
     state: latest
   when: aminerrest_repopath != False
