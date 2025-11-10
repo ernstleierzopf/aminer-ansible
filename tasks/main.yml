@@ -329,13 +329,6 @@
     state: latest
   when: aminerrest_repopath != False
 
-- name: Install jsonschema
-  pip:
-    name: jsonschema
-    virtualenv: /usr/lib/logdata-anomaly-miner/.venv
-    state: latest
-  when: aminerrest_repopath != False
-
 - name: Set venv activate permissions
   file:
     path: "/usr/lib/logdata-anomaly-miner/.venv/bin/activate"
