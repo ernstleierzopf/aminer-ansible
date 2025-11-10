@@ -15,4 +15,3 @@ aminer_group: "aminer"
 aminer_docbookxslpath: "/usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl"
 aminer_usershell: /usr/sbin/nologin
 aminerrest_repopath: False
-debian_based: ["Debian", "Ubuntu", "Linux Mint", "Lubuntu", "Pop!_OS"]
